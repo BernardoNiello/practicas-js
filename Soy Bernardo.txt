@@ -1,1 +1,2 @@
 Soy Bernardo, hago un cambio para ver como actualizar un commit.
+estoy aprendiendo git
