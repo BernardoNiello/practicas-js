@@ -1,0 +1,45 @@
+*{
+margin: 0;
+padding: 0;
+font-family: Verdana, sans-serif;
+}
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+}
+div{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 80vw;
+height: 80vh;
+background-color: #2b807b;
+gap: 30px;
+box-shadow: 3px 3px 10px ;
+border: none;
+border-radius: 20px;
+
+}
+button{
+    height: 50px;
+    width: 100px;
+    border-radius: 8px;
+    background-color: #48e;
+    color: #fff;
+    font-size: 40px;
+    border: 2px solid #000;
+
+}
+span{
+    font-size: 40px;
+}
+button:hover{
+transform: scale(1.2);
+}
+button:active{
+    transform: scale(1.1);
+    background-color: #999;
+}
