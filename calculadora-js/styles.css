@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    background-color: #fff;
+}
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-top: 30px;
+   background-color: #352525;
+   width: 50vw;
+   height: 80vh;
+   margin: 0 auto; 
+   padding: 10px;
+   box-sizing: border-box;
+   margin-top: 30px;
+   border-radius: 20px;
+}
+h2{
+    color: #fff;
+    margin-top: 15px;
+}
+.contenedor-input{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-between;
+   }
+   .contenedor-input input{
+    width: 100%;
+    height: 5vh;
+    border-radius: 10px;
+    margin: 20px;
+    padding-left: 10px;
+    font-size: 30px;
+    font-weight: bold;
+   }
+.contenedor-classic-button{
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 5px; 
+    background-color: #555;
+    width: 60%;
+    padding: 30px;
+    border-radius: 20px;
+    height: 30%;
+    min-width: 170px;
+    justify-content: center;
+
+}
+.contenedor-classic-button button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    background-color: #fff;
+    font-weight: bolder;
+    padding: 10px;
+    width: 100%;
+    
+}
+
+  
+.contenedor-salida{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: center;
+}
+.contenedor-salida input{
+ 
+    width: 50%;
+    height: 5vh;
+    border-radius: 10px;
+    margin: 20px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+   
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+   
+}
+.contenedor-special-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  
+    background-color: #555;
+    width: 80%;
+    padding: 30px;
+    border-radius: 20px;
+    height: auto;
+    padding: 15px;
+    margin-bottom: 20px;
+    
+
+}
+.contenedor-special-button button{
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    background-color: #fff;
+    font-weight: bolder;
+    
+    height: 40px;
+    width: 30%;
+}
+/*HOVER*/
+
+button:hover{
+    background-color: #bbb;
+    transform: scale(1.2);
+    border-bottom: 2px solid #000; /* Borde en la parte inferior */
+    border-right: 2px solid #000;
+}
+
+button:active{
+    transform: scale(1.1);
+    border-bottom: 4px solid #000; /* Borde en la parte inferior */
+    border-right: 4px solid #000;
+}

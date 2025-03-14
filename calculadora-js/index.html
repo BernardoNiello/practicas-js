@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h2>calculadora</h2>
+
+        <div class="contenedor-input">
+
+        <input type="text" id="numero1">
+        <input type="text" id="numero2">
+       
+        </div>
+
+        <div class="contenedor-classic-button">
+            <button onclick="sumar()" id="sumar">+</button>
+        <button onclick="restar()">-</button>
+        <button onclick="multiplicar()">x</button>
+        <button onclick="dividir()">/</button>
+        <button onclick="raizCuadrada()">√</button>
+        <button onclick="potencia()">^</button>
+        <button onclick="ValorAbsoluto()">ABS</button>
+        <button onclick="alAzar()">Random</button>
+
+        </div>
+
+          
+       <div class="contenedor-salida">
+        <input type="text" id="resultado">
+       </div>
+        
+        <div class="contenedor-special-button">
+
+            <button onclick="redondear()">round</button>
+            <button onclick="redondearAbajo()">floor</button>
+            <button onclick="redondearArriba()">ceil</button>
+        
+
+        </div>
+      
+        
+        
+    
+    </div>
+   
+    <script>
+        
+       function entregarResultado(resultado){
+        document.getElementById("resultado").value = resultado;
+
+       }
+
+       function sumar(){
+            
+        let num1=document.getElementById("numero1").value;
+        let num2=document.getElementById("numero2").value;
+        entregarResultado(+num1 + +num2);
+
+    }
+
+    function restar(){
+            
+        let num1=document.getElementById("numero1").value;
+        let num2=document.getElementById("numero2").value;
+        entregarResultado(+num1 - +num2);
+
+    }
+        
+    function multiplicar(){
+            
+        let num1=document.getElementById("numero1").value;
+        let num2=document.getElementById("numero2").value;
+        entregarResultado(+num1 * +num2);
+
+    }
+    function dividir(){
+            
+        let num1=document.getElementById("numero1").value;
+        let num2=document.getElementById("numero2").value;
+        entregarResultado(+num1 / +num2);
+
+    }
+    function raizCuadrada(){
+            
+        let num1=+document.getElementById("numero1").value;
+       
+        entregarResultado(Math.sqrt(num1));
+
+    }
+    function potencia(){
+            
+        let num1=+document.getElementById("numero1").value;
+       
+        entregarResultado(Math.pow(num1));
+
+    }
+    function valorAbsoluto(){
+            
+        let num1=+document.getElementById("numero1").value;
+       
+        entregarResultado(Math.abs(num1));
+
+    }
+
+function alAzar() {
+    let num1 = +document.getElementById("numero1").value;
+    let num2 = +document.getElementById("numero2").value;
+
+    // Asegurar que num1 sea el menor y num2 el mayor
+    let min = Math.min(num1, num2);
+    let max = Math.max(num1, num2);
+
+    let numeroAleatorio = Math.floor(Math.random() * (max - min + 1)) + min;
+
+    entregarResultado(numeroAleatorio);
+}
+function redondear(){
+            
+    let num=+document.getElementById("resultado").value;
+   
+    entregarResultado(Math.round(num));
+
+}
+function redondearAbajo(){
+            
+    let num=+document.getElementById("resultado").value;
+   
+   
+    entregarResultado(Math.floor(num));
+
+}
+function redondearArriba(){
+            
+    let num=+document.getElementById("resultado").value;
+   
+    entregarResultado(Math.ceil(num));
+
+}
+
+
+
+
+        
+        
+    </script>
+    
+</body>
+</html>
