@@ -1,0 +1,3 @@
+[submodule "registro-empleados-js"]
+	path = registro-empleados-js
+	url = https://github.com/BernardoNiello/registro-empleados-js.git
