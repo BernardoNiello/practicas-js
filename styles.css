@@ -1,0 +1,90 @@
+
+*{
+margin: 0;
+padding: 0;
+font-family: sans-serif;
+}
+h1{
+    margin: 20px;
+    text-align: center;
+   
+}
+/* div para los input*/
+.input{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    background-color: #d1cbcb;
+    margin: 10px;
+    margin-bottom: 0;
+    padding: 20px;
+    height: auto;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.input p{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center
+}
+.input p label{
+    min-width: 120px;
+    text-align: start;
+}
+.input p input{
+    height: 30px;
+    border: none;
+    border-radius: 7px;
+}
+
+/* div para los botones*/
+
+.botones{
+    display: flex;
+    gap: 20px;
+    background-color: #bebbd2;
+    padding: 20px;
+    margin: 10px;
+    margin-bottom: 0;
+    margin-top: 0;
+    border-radius: 0px 0px 0px 0px;
+}
+.botones button{
+    height: 30px;
+    width: auto;
+    font-weight: bold;
+    padding: 5px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    color: #837d7d;
+}
+.botones button:hover{
+   transform: scale(1.2);
+}
+.botones button:active{
+    transform: scale(1.1);
+ }
+ /* div para los textos de salida*/
+
+ .textoSalida{
+    display: flex;
+    flex-direction: column;
+    background-color: #9fc2c8;
+    margin: 0px 10px 10px 10px;
+    border-radius:0px 0px 10px 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+    
+ }
+ .empleado{
+margin: 10px;
+background-color: #fff;
+padding: 10px;
+width: 300px;
+border-radius: 10px;
+ }
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMPLEADOS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Registro de empleados</h1>
+    <div class="input">
+       <p><label for="nombre">NOMBRE</label><input type="text" id="nombre"></p> 
+       <p><label for="apellido">APELLIDO</label><input type="text" id="apellido"></p> 
+       <p><label for="edad">EDAD</label><input type="text" id="edad"></p> 
+       <p><label for="dni">DNI</label><input type="text" id="dni"></p> 
+    </div>
+
+    <div class="botones">
+        <button onclick="guardar()">GUARDAR</button>
+
+        <button onclick="recorrerLista()">VER LISTA EMPLEADOS</button>
+    </div>
+     
+
+    <div class="textoSalida" id="textoSalida">
+        
+    </div>
+
+     
+
+
+    <script>
+       
+
+        let empleados=[];
+        
+
+        function Empleado(nombre, apellido, edad, dni){
+  
+            this.nombre= nombre;
+            this.apellido= apellido;
+            this.edad= edad;
+            this.dni=dni;
+        }
+
+        function guardar(){
+            let nombre= document.getElementById("nombre").value;
+            let apellido= document.getElementById("apellido").value;
+            let edad= document.getElementById("edad").value;
+            let dni= document.getElementById("dni").value;
+
+           let nuevoEmpleado = new Empleado(nombre,apellido,edad,dni);
+           empleados.push(nuevoEmpleado);
+
+            document.getElementById('nombre').value='';
+            document.getElementById("apellido").value='';
+            document.getElementById("edad").value='';
+            document.getElementById("dni").value='';
+        }
+
+        function recorrerLista() {
+            let divSalida = document.getElementById('textoSalida');
+            divSalida.innerHTML = ''; // Limpiar antes de agregar nuevos empleados
+        
+            for (let empleado of empleados) {
+                let nuevoEmpleado = document.createElement('div');
+                nuevoEmpleado.classList.add('empleado'); // Se usa correctamente
+        
+                let contenido = "<strong>Empleado:</strong><br>"; // Reiniciar contenido por cada empleado
+        
+                for (let datosEmpleado in empleado) {
+                    console.log(datosEmpleado + ': ' + empleado[datosEmpleado]);
+                    contenido += `${datosEmpleado}: ${empleado[datosEmpleado]}<br>`;
+                }
+        
+                nuevoEmpleado.innerHTML = contenido;
+                divSalida.appendChild(nuevoEmpleado); // Agregar el nuevo div al contenedor
+            }
+        }
+        
+                  
+        
+
+    </script>
+
+</body>
+</html>
